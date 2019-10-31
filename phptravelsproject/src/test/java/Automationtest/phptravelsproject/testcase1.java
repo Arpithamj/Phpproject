@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class testcase1 extends Registration{
@@ -20,8 +21,15 @@ public class testcase1 extends Registration{
 		r1.registrationpage();
 		
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src,new File("C:\\arpitha\\signupscreenshot"));
+		FileUtils.copyFile(src,new File("C:\\arpithamj\\signupscreenshot"));
 		
+		
+		
+	}
+	@AfterTest
+	public void close() {
+		driver.close();
 	}
 
 }
+	

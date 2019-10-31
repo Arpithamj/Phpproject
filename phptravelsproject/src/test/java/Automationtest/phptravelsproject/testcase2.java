@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 public class testcase2 extends Launch {
@@ -19,7 +20,11 @@ public class testcase2 extends Launch {
 		r2.loginpage();
 		
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(src,new File("C:\\arpitha\\loginscreenshot"));
+		FileUtils.copyFile(src,new File("C:\\arpithamj\\loginscreenshot"));
+	}
+	@AfterTest
+	public void close() {
+		driver.close();
 	}
 	
 

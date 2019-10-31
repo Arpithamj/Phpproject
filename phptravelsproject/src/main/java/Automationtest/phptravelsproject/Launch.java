@@ -14,10 +14,9 @@ public class Launch {
 	public static Properties prop=new Properties();
 	
 	public static void Launchbrowser() throws IOException {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\online Test\\Desktop\\chrome\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Online Test\\Downloads\\chromedriver_win32 (4)\\chromedriver.exe");
 		driver=new ChromeDriver();
-		//Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("C:\\Users\\Online Test\\Desktop\\New folder\\phptravelsproject\\src\\main\\java\\files\\data.properties");
+		FileInputStream fis=new FileInputStream("C:\\Users\\Online Test\\git\\Phpproject\\phptravelsproject\\src\\main\\java\\files\\data.properties");
 	    prop.load(fis);
 	    driver.get(prop.getProperty("HOST"));
 	    driver.manage().window().maximize();
@@ -25,7 +24,7 @@ public class Launch {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-   //Launchbrowser();
+   Launchbrowser();
 	}
 
 }
